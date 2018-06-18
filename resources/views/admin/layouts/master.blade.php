@@ -61,8 +61,8 @@
                             <!--<li class="menu-title">Navigation</li>-->
 
                             <li>
-                                <a href="index.html">
-                                    <i class="fi-air-play"></i><span class="badge badge-danger badge-pill pull-right">7</span> <span> Dashboard </span>
+                                <a href="uyeler">
+                                    <i class="fi-air-play"></i><span class="badge badge-danger badge-pill pull-right">7</span> <span> Üyeler </span>
                                 </a>
                             </li>
 
@@ -773,7 +773,6 @@
         <script src="{{URL::asset('plugins/flot-chart/jquery.flot.pie.js')}}"></script>
         <script src="{{URL::asset('plugins/flot-chart/jquery.flot.crosshair.js')}}"></script>
         <script src="{{URL::asset('plugins/flot-chart/curvedLines.js')}}"></script>
-        <script src="{{UR}}"></script>
 
         <!-- KNOB JS -->
         <!--[if IE]>

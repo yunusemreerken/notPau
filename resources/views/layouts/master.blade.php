@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"> -->
     <!-- Title -->
-    <title>Corporate Plus | Multipurpose Business HTML Template</title>
+    <title>Not Paü</title>
 
     <!-- Common Stylesheets -->
     <link rel="stylesheet" href="{{URL::asset('corporate/css/bootstrap.min.css')}}">
@@ -116,7 +116,7 @@
                   <div class="row">
                       <div class="col-md-3 col-sm-12 col-xs-12">
                           <div class="logo-holder">
-                              <a href="{{route('home')}}"><img src="images/theme-logo-1.png" width="220" alt=""></a>
+                              <a href="{{route('home')}}"><img src="images/ilk-tema.png" width="220" alt=""></a>
                           </div>
                       </div>
                       <!-- <div class="col-md-5 col-sm-12 col-xs-12">
@@ -152,13 +152,13 @@
                                         ?>
                                               <!-- <input type="text" name="ara" value="" placeholder="Not Ara"> -->
 
-                                            <a href="{{ route('login') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-sign-in">Not Yükle</i></a>
-                                            <a href="{{ route('register') }}" class="btn btn-warning" aria-hidden="true"><i class="fa fa-user-plus">Davet et</i></a>
+                                            <a href="{{ route('not-yukle') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-sign-in">Not Yükle</i></a>
+                                            <!-- <a href="{{ route('register') }}" class="btn btn-warning" aria-hidden="true"><i class="fa fa-user-plus">Davet et</i></a> -->
                                             <a href="{{ route('sepetim') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-shopping-bag"></i>
 <span class="cart-total cart-total-1">5</span></i></a>
-                                            <a href="{{ route('sepetim') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-envelope" ></i></a>
+                                            <a href="{{ route('mesajlar') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-envelope" ></i></a>
                                             <div class="dropdown">
-                                              <button class="dropbtn">{{ Auth::user()->name }}<span class="caret"></span></button>
+                                              <button class="dropbtn">{{ Auth::user()->name }}</button>
                                               <div class="dropdown-content">
                                                 <a href="{{ route('hesabim') }}">
                                                   {{ __('Hesabım') }}
@@ -248,101 +248,46 @@
 
 
 
-    <section class="feature-service">
+
+  <section class="feature-service">
+      <div class="container">
+          <div class="title title-black">
+              <!-- <p>Our Team</p> -->
+              <h2>Son Eklenen Notlar</h2>
+          </div>
+          <div class="owl-carousel owl-theme team-member-slide">
+
+            @yield('son_eklenen')
+
+          </div>
+      </div>
+      <div class="viewmore"> <a href="not-ara" class="more viewmore-3">Diğer Tüm Notlar</a> </div>
+  </section>
+  <div class="clearfix"></div>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
         <div class="container">
-            <div class="title title-black">
-                <!-- <p>Our Team</p> -->
-                <h2>Son Eklenen Notlar</h2>
-            </div>
-            <div class="owl-carousel owl-theme team-member-slide">
-                <div class="item">
-                    <div class="team-block">
-                        <div class="team-img">
-                            <a href="team-details.html"> <img src="images/staff/staff-1.jpg" alt="" /> </a>
-                        </div>
-                        <div class="team-info">
-                            <h4>Albert Wilson</h4>
-                            <p>Sales Manager</p>
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="row">
+
+                <!-- Short Introduction Section-->
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                  <div class="team-img">
+                      <img src="images/staff/staff-5.jpg" alt="" />
+                  </div>
                 </div>
-                <div class="item">
-                    <div class="team-block">
-                        <div class="team-img">
-                            <a href="team-details.html"> <img src="images/staff/staff-2.jpg" alt="" /> </a>
+
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <div class="introduction-left">
+                        <div class="title">
+                            <!-- <p>Introduction</p> -->
+                            <h2>Not ARAMA</h2>
                         </div>
-                        <div class="team-info">
-                            <h4>Davis Smith</h4>
-                            <p>Project Manager</p>
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-block">
-                        <div class="team-img">
-                            <a href="team-details.html"> <img src="images/staff/staff-3.jpg" alt="" /> </a>
-                        </div>
-                        <div class="team-info">
-                            <h4>John Roy</h4>
-                            <p>Project Assistant</p>
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-block">
-                        <div class="team-img">
-                            <a href="team-details.html"> <img src="images/staff/staff-4.jpg" alt="" /> </a>
-                        </div>
-                        <div class="team-info">
-                            <h4>Rob Watson</h4>
-                            <p>Civil Engineer</p>
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="team-block">
-                        <div class="team-img">
-                            <a href="team-details.html"> <img src="images/staff/staff-5.jpg" alt="" /> </a>
-                        </div>
-                        <div class="team-info">
-                            <h4>Tom Smith</h4>
-                            <p>Business Analyst</p>
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                        <p>NotPaü ile not bulmak artık çok daha kolay. Kullanıcıların yüklediği notlar arasından çok rahat bir şekilde eleme yapabilir ve notu kullanmaya başlayabilirsiniz.</p>
+                        <!-- <a href="about-us.htm" class="more viewmore-3">read more</a> </div> -->
                 </div>
             </div>
         </div>
-        <div class="viewmore"> <a href="service.html" class="more viewmore-3">Diğer Tüm Notlar</a> </div>
     </section>
     <div class="clearfix"></div>
 
@@ -350,49 +295,36 @@
     <section class="introduction">
         <div class="container">
             <div class="row">
+
+              <!-- Short Introduction Section-->
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="team-img">
+                    <img src="images/staff/staff-6.jpg" alt="" />
+                </div>
+              </div>
+
                 <div class="col-md-7 col-sm-12 col-xs-12">
                     <div class="introduction-left">
                         <div class="title">
                             <!-- <p>Introduction</p> -->
-                            <h2>Not Arama,not yükle para kazan,hesap haraketlerini yönet</h2>
+                            <h2>not yükle para kazan</h2>
                         </div>
-                        <p> orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                        <a href="about-us.html" class="more viewmore-3">read more</a> </div>
+                        <p>Kim derslerde aldığı notlar üzerinden para kazanmak istemez ki ? Artık NotPaü ile para kazanmak için yapmanız gereken tek şey notları sisteme yükleyip satın alınmasını beklemek.</p>
+                        <!-- <a href="about-us.html" class="more viewmore-3">read more</a> </div> -->
                 </div>
 
-                <!-- Short Introduction Section-->
-                <div class="col-md-5 col-sm-12 col-xs-12">
-                    <div class="introduction-right">
-                        <div class="short-intro-item">
-                            <div class="text-icon"> <i class="icofont icofont-history"></i> </div>
-                            <div class="text-content">
-                                <h4> <a href="#">History</a></h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            </div>
-                        </div>
-                        <div class="short-intro-item">
-                            <div class="text-icon"> <i class="icofont icofont-company"></i> </div>
-                            <div class="text-content">
-                                <h4> <a href="#">Management</a></h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            </div>
-                        </div>
-                        <div class="short-intro-item">
-                            <div class="text-icon"> <i class="icofont icofont-growth"></i> </div>
-                            <div class="text-content">
-                                <h4> <a href="#">Company Status</a></h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <div class="clearfix"></div>
 
+
+
+
+
     <!-- Middle Information Section -->
-    <section class="middle-information">
+    <!-- <section class="middle-information">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
@@ -456,10 +388,10 @@
             </div>
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
     <!-- feature-service Section -->
-    <section class="feature-service">
+    <!-- <section class="feature-service">
         <div class="container">
             <div class="title">
                 <h2>Feature Services</h2>
@@ -524,13 +456,13 @@
             <div class="viewmore"> <a href="service.html" class="more viewmore-3">View More</a> </div>
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
     <!-- Staff Member Section -->
 
 
     <!-- Recent Update Section -->
-    <section class="recent-update">
+    <!-- <section class="recent-update">
         <div class="container">
             <div class="title">
                 <p> News and Events</p>
@@ -604,10 +536,10 @@
             </div>
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
     <!-- Testimonials Section -->
-    <section class="customer-testimonials">
+    <!-- <section class="customer-testimonials">
         <div class="container">
             <div class="title">
                 <p>Pleople Testimonials</p>
@@ -641,10 +573,10 @@
             </div>
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
     <!-- Project Gallery Section -->
-    <section class="project-gallery">
+    <!-- <section class="project-gallery">
         <div class="container-fluid">
             <div class="title">
                 <p> Photo Gallery</p>
@@ -674,10 +606,10 @@
             </div>
         </div>
     </section>
-    <div class="clearfix"></div>
+    <div class="clearfix"></div> -->
 
     <!-- Partner Logo Section -->
-    <section class="partner-logo">
+    <!-- <section class="partner-logo">
         <div class="container">
             <div class="owl-carousel owl-theme partner-logo-slide">
                 <div class="item">
@@ -697,12 +629,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer Section -->
     <footer>
         <!-- Top Footer Section -->
-        <div class="top-footer">
+        <!-- <div class="top-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -738,10 +670,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Bottom Footer Section -->
-        <div class="bottom-footer">
+        <!-- <div class="bottom-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
@@ -763,7 +695,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </footer>
 
     <!-- Go to top -->

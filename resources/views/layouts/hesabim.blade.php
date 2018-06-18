@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Highdmin - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Not Paü | Hesabım</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -18,8 +18,10 @@
         <link href="{{URL::asset('admin/assets/css/style.css')}}" rel="stylesheet" type="text/css" />
 
         <script src="{{URL::asset('admin/assets/js/modernizr.min.js')}}"></script>
+
+        <link href="{{URL::asset('admin/plugins/footable/css/footable.core.css')}}" rel="stylesheet">
         <!-- table responsive css -->
-        <link href="{{URL::asset('admin/plugins/responsive-table/css/rwd-table.min.css')}}" rel="stylesheet" type="text/css" media="screen">
+        <!-- <link href="{{URL::asset('admin/plugins/responsive-table/css/rwd-table.min.css')}}" rel="stylesheet" type="text/css" media="screen"> -->
         <style>
 
         .dropbtn {
@@ -62,6 +64,7 @@
             background-color: #3e8e41;
         }
         </style>
+        @yield('head')
     </head>
 
 
@@ -119,15 +122,19 @@
         <!-- App js -->
         <script src="{{URL::asset('admin/assets/js/jquery.core.js')}}"></script>
         <script src="{{URL::asset('admin/assets/js/jquery.app.js')}}"></script>
-
+        <!--FooTable-->
+        <script src="{{URL::asset('admin/plugins/footable/js/footable.all.min.js')}}"></script>
+        <!--FooTable Example-->
+        <script src="{{URL::asset('admin/assets/pages/jquery.footable.js')}}"></script>
         <!-- responsive table -->
-        <script src="{{URL::asset('admin/plugins/responsive-table/js/rwd-table.min.js')}}" type="text/javascript"></script>
-        <script>
+        <!-- <script src="{{URL::asset('admin/plugins/responsive-table/js/rwd-table.min.js')}}" type="text/javascript"></script> -->
+        <!-- <script>
             $(function() {
                 $('.table-responsive').responsiveTable({
                     addDisplayAllBtn: 'btn btn-secondary'
                 });
             });
-        </script>
+        </script> -->
+        @yield('footer')
     </body>
 </html>

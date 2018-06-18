@@ -28,10 +28,10 @@
               ?>
                     <!-- <input type="text" name="ara" value="" placeholder="Not Ara"> -->
 
-                  <a href="{{ route('login') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-sign-in">Not Yükle</i></a>
-                  <a href="{{ route('register') }}" class="btn btn-warning" aria-hidden="true"><i class="fa fa-user-plus">Davet et</i></a>
+                  <a href="{{ route('not-ara') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-sign-in">Not Ara</i></a>
+                  <!-- <a href="{{ route('register') }}" class="btn btn-warning" aria-hidden="true"><i class="fa fa-user-plus">Davet et</i></a> -->
                   <a href="{{ route('sepetim') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-shopping-basket"></i></a>
-                  <a href="{{ route('sepetim') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-envelope" ></i></a>
+                  <a href="{{ route('mesajlar') }}" class="btn btn-primary" aria-hidden="true"><i class="fa fa-envelope" ></i></a>
                   <div class="dropdown">
                     <button class="dropbtn">{{ Auth::user()->name }}<span class="caret"></span></button>
                     <div class="dropdown-content">

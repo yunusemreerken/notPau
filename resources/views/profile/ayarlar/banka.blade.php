@@ -1,4 +1,4 @@
-@extends('layouts.adminMaster')
+@extends('layouts.hesabim')
 
 @section('content')
 <div class="content">
@@ -10,25 +10,23 @@
                 <h4 class="m-t-0 header-title">Banka Bilgileri</h4>
 
 
-                <form>
+                <form action="banka-ekle" method="post">
+                  {{csrf_field()}}
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4" class="col-form-label">Ad*</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <label for="inputEmail4" class="col-form-label">Ad(*)</label>
+                            <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputPassword4" class="col-form-label">Soyad</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                            <label for="inputEmail4" class="col-form-label">TC(*)</label>
+                            <input type="number" name="tc" class="form-control" id="inputEmail4" placeholder="">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4" class="col-form-label">Tc*</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4" class="col-form-label">iban</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+
+                        <div class="form-group col-md-9">
+                            <label for="inputPassword4" class="col-form-label">IBAN
+                            <input type="number" name="iban" class="form-control" id="inputPassword4" placeholder="Boşluk bırakmadan giriniz!">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success">Güncelle</button>
